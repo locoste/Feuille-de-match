@@ -21,7 +21,7 @@ namespace Feuille_de_match
         public Feuille_image()
         {
             InitializeComponent();
-            this.image = new Image_terrain(new Bitmap(System.Drawing.Image.FromFile("C:\\Users\\louis\\OneDrive\\Documents\\Rugby\\Terrain-Fac.jpg")));
+            this.image = new Image_terrain(new Bitmap(System.Drawing.Image.FromFile(".\\Terrain-Fac.jpg")));
             //this.field_image.Image = this.image.get_image();
         }
 
@@ -32,12 +32,16 @@ namespace Feuille_de_match
 
             for (int i = 0; i < joueurs.Count; i++)
             {
-                if (joueurs[i].get_poste().get_num() < 16)
+                if (joueurs[i].nom_complet() != " ")
                 {
-                    this.image.set_new_player(joueurs[i].get_poste().get_point(), joueurs[i], joueurs[i].get_poste().get_num(), joueurs[i].get_joueur_image());
-                } else
-                {
-                    this.image.set_new_player_remplacant(joueurs[i].get_poste().get_point(), joueurs[i], joueurs[i].get_poste().get_num());
+                    if (joueurs[i].get_poste().get_num() < 16)
+                    {
+                        this.image.set_new_player(joueurs[i].get_poste().get_point(), joueurs[i], joueurs[i].get_poste().get_num(), joueurs[i].get_joueur_image());
+                    }
+                    else
+                    {
+                        this.image.set_new_player_remplacant(joueurs[i].get_poste().get_point(), joueurs[i], joueurs[i].get_poste().get_num());
+                    }
                 }
             }
 

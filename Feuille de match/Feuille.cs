@@ -34,9 +34,9 @@ namespace Feuille_de_match
 
         private void set_position()
         {
-            string[] postes_list = System.IO.File.ReadAllLines("C:\\Users\\louis\\OneDrive\\Documents\\Rugby\\Position.txt");
-            string[] coo = System.IO.File.ReadAllLines("C:\\Users\\louis\\OneDrive\\Documents\\Rugby\\Coordonnees.txt");
-            string[] joueurs = System.IO.File.ReadAllLines("C:\\Users\\louis\\OneDrive\\Documents\\Rugby\\Joueur.txt");
+            string[] postes_list = System.IO.File.ReadAllLines(".\\Position.txt");
+            string[] coo = System.IO.File.ReadAllLines(".\\Coordonnees.txt");
+            string[] joueurs = System.IO.File.ReadAllLines(".\\Joueur.txt");
 
             for (int i = 0; i< postes_list.Length; i++)
             {
@@ -47,13 +47,13 @@ namespace Feuille_de_match
             }
             foreach(string joueur in joueurs)
             {
-                Joueur j = new Joueur(joueur.Split(' ')[0], joueur.Split(' ')[1]);
-                if(joueur.Split(' ').Length == 3)
+                Joueur j = new Joueur(joueur.Split(',')[0], joueur.Split(',')[1]);
+                if(joueur.Split(',').Length == 3)
                 {
                     j.set_joueur_image(joueur.Split(' ')[2]);
                 }
                 this.equipe.add_player(j);
-                this.list_players.Items.Add(j.get_nom_feuille());
+                this.list_players.Items.Add(j.nom_liste());
             }
             this.joueurs_positionne = new List<Joueur>(22);
             for (int i = 0; i < postes_list.Length; i++)
@@ -82,9 +82,9 @@ namespace Feuille_de_match
                 }
                 this.equipe.add_player(joueur);
          
-                this.list_players.Items.Add(joueur.nom_complet());
+                this.list_players.Items.Add(joueur.nom_liste());
 
-                File.AppendAllText(@"C:\\Users\\louis\\OneDrive\\Documents\\Rugby\\Joueur.txt", Environment.NewLine + joueur.nom_complet());
+                File.AppendAllText(@".\\Joueur.txt", Environment.NewLine + joueur.nom_complet());
 
             }
         }
@@ -93,15 +93,7 @@ namespace Feuille_de_match
         {
             if (this.positions.SelectedItem != null && this.list_players.SelectedIndex != -1)
             {
-                if (this.tmp_joueur.Contains(this.list_players.SelectedItem.ToString())){
-                    var deja_select_form = new deja_select();
-                    deja_select_form.ShowDialog();
-                    if (deja_select_form.DialogResult == DialogResult.OK)
-                    {
-                        deja_select_form.Close();
-                    }
-                } else
-                {
+                
                     switch (this.positions.SelectedIndex)
                     {
                         case 0:
@@ -182,7 +174,7 @@ namespace Feuille_de_match
                     this.tmp_joueur[this.positions.SelectedIndex] = this.list_players.SelectedItem.ToString();
                     this.equipe.get_equipe()[this.list_players.SelectedIndex].set_poste(postes[this.positions.SelectedIndex]);
                     this.joueurs_positionne[this.positions.SelectedIndex] =  this.equipe.get_equipe()[this.list_players.SelectedIndex];
-                }
+                
                 //this.image.set_new_player(this.postes[this.positions.SelectedIndex].get_point(), this.equipe.get_equipe()[this.list_players.SelectedIndex].get_joueur_image(), this.equipe.get_equipe()[this.list_players.SelectedIndex], this.positions.SelectedIndex + 1);
                 //this.field_image.Image = this.image.get_image();
             } else
@@ -198,9 +190,38 @@ namespace Feuille_de_match
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Feuille_image feuille_match_form = new Feuille_image();
-            feuille_match_form.set_image(this.joueurs_positionne, this.lieu_match.Lines, this.date.Text, this.heure.Text, this.image_lyon2.Image, this.image_adv.Image);
-            feuille_match_form.Show();
+            List<string> tmp_joueur_feuille = new List<string>();
+            List<string> joueur_double = new List<string>();
+            foreach(Joueur select_joueur in this.joueurs_positionne)
+            {
+                if (tmp_joueur_feuille.Contains(select_joueur.nom_complet()) & select_joueur.nom_complet() != " ")
+                {
+                    joueur_double.Add(select_joueur.nom_complet());
+                }
+                tmp_joueur_feuille.Add(select_joueur.nom_complet());
+            }
+
+            if (joueur_double.Count > 0)
+            {
+                joueur_en_double_windows(joueur_double);
+            }
+            else
+            {
+                Feuille_image feuille_match_form = new Feuille_image();
+                feuille_match_form.set_image(this.joueurs_positionne, this.lieu_match.Lines, this.date.Text, this.heure.Text, this.image_lyon2.Image, this.image_adv.Image);
+                feuille_match_form.Show();
+            }
+        }
+
+        private void joueur_en_double_windows(List<string> joueur_double)
+        {
+            deja_select doublons = new deja_select();
+            doublons.set_joueur_en_double(joueur_double);
+            
+            if (doublons.ShowDialog() == DialogResult.OK)
+            {
+                doublons.Close();
+            }
         }
 
         private void image_adv_Click(object sender, EventArgs e)
@@ -253,56 +274,56 @@ namespace Feuille_de_match
 
         private void set_team_players()
         {
-            this.nom1.Text = this.joueurs_positionne[0].get_nom_feuille();
-            this.nom2.Text = this.joueurs_positionne[1].get_nom_feuille();
-            this.nom3.Text = this.joueurs_positionne[2].get_nom_feuille();
-            this.nom4.Text = this.joueurs_positionne[3].get_nom_feuille();
-            this.nom5.Text = this.joueurs_positionne[4].get_nom_feuille();
-            this.nom6.Text = this.joueurs_positionne[5].get_nom_feuille();
-            this.nom7.Text = this.joueurs_positionne[6].get_nom_feuille();
-            this.nom8.Text = this.joueurs_positionne[7].get_nom_feuille();
-            this.nom9.Text = this.joueurs_positionne[8].get_nom_feuille();
-            this.nom10.Text = this.joueurs_positionne[9].get_nom_feuille();
-            this.nom11.Text = this.joueurs_positionne[10].get_nom_feuille();
-            this.nom12.Text = this.joueurs_positionne[11].get_nom_feuille();
-            this.nom13.Text = this.joueurs_positionne[12].get_nom_feuille();
-            this.nom14.Text = this.joueurs_positionne[13].get_nom_feuille();
-            this.nom15.Text = this.joueurs_positionne[14].get_nom_feuille();
+            this.nom1.Text = this.joueurs_positionne[0].nom_complet();
+            this.nom2.Text = this.joueurs_positionne[1].nom_complet();
+            this.nom3.Text = this.joueurs_positionne[2].nom_complet();
+            this.nom4.Text = this.joueurs_positionne[3].nom_complet();
+            this.nom5.Text = this.joueurs_positionne[4].nom_complet();
+            this.nom6.Text = this.joueurs_positionne[5].nom_complet();
+            this.nom7.Text = this.joueurs_positionne[6].nom_complet();
+            this.nom8.Text = this.joueurs_positionne[7].nom_complet();
+            this.nom9.Text = this.joueurs_positionne[8].nom_complet();
+            this.nom10.Text = this.joueurs_positionne[9].nom_complet();
+            this.nom11.Text = this.joueurs_positionne[10].nom_complet();
+            this.nom12.Text = this.joueurs_positionne[11].nom_complet();
+            this.nom13.Text = this.joueurs_positionne[12].nom_complet();
+            this.nom14.Text = this.joueurs_positionne[13].nom_complet();
+            this.nom15.Text = this.joueurs_positionne[14].nom_complet();
             if (this.joueurs_positionne.Count >= 16)
             {
-                this.nom16.Text = this.joueurs_positionne[15].get_nom_feuille();
+                this.nom16.Text = this.joueurs_positionne[15].nom_complet();
             }
             if (this.joueurs_positionne.Count >= 17)
             {
-                this.nom17.Text = this.joueurs_positionne[16].get_nom_feuille();
+                this.nom17.Text = this.joueurs_positionne[16].nom_complet();
             }
             if (this.joueurs_positionne.Count >= 18)
             {
-                this.nom18.Text = this.joueurs_positionne[17].get_nom_feuille();
+                this.nom18.Text = this.joueurs_positionne[17].nom_complet();
             }
             if (this.joueurs_positionne.Count >= 19)
             {
-                this.nom19.Text = this.joueurs_positionne[18].get_nom_feuille();
+                this.nom19.Text = this.joueurs_positionne[18].nom_complet();
             }
             if (this.joueurs_positionne.Count >= 20)
             {
-                this.nom20.Text = this.joueurs_positionne[19].get_nom_feuille();
+                this.nom20.Text = this.joueurs_positionne[19].nom_complet();
             }
             if (this.joueurs_positionne.Count >= 21)
             {
-                this.nom21.Text = this.joueurs_positionne[20].get_nom_feuille();
+                this.nom21.Text = this.joueurs_positionne[20].nom_complet();
             }
             if (this.joueurs_positionne.Count >= 22)
             {
-                this.nom22.Text = this.joueurs_positionne[21].get_nom_feuille();
+                this.nom22.Text = this.joueurs_positionne[21].nom_complet();
             }
             if (this.joueurs_positionne.Count >= 23)
             {
-                this.nom23.Text = this.joueurs_positionne[22].get_nom_feuille();
+                this.nom23.Text = this.joueurs_positionne[22].nom_complet();
             }
             if (this.joueurs_positionne.Count >= 24)
             {
-                this.nomCoach.Text = this.joueurs_positionne[23].get_nom_feuille();
+                this.nomCoach.Text = this.joueurs_positionne[23].nom_complet();
             }
         }
     }

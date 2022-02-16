@@ -39,7 +39,12 @@ namespace Feuille_de_match
 
         public string nom_complet()
         {
-            return this.prenom+ " " + this.nom.ToUpper();
+            return this.prenom+ " " + this.nom;
+        }
+
+        public string nom_liste()
+        {
+            return this.prenom + " " + this.nom;
         }
 
         public string get_nom_feuille()
@@ -50,6 +55,11 @@ namespace Feuille_de_match
         public string get_surnom()
         {
             return this.surnom;
+        }
+
+        public string get_nom()
+        {
+            return this.nom;
         }
 
         public void set_nom(string nom)

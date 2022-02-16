@@ -16,5 +16,15 @@ namespace Feuille_de_match
         {
             InitializeComponent();
         }
+
+        public void set_joueur_en_double(List<string> joueurs)
+        {
+            foreach (string joueur in joueurs)
+            {
+                this.joueurs.Text += joueur + ", ";
+            }
+            this.joueurs.Text = this.joueurs.Text.Substring(0, this.joueurs.Text.Length - 2);
+        }
+
     }
 }

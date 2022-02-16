@@ -103,16 +103,16 @@ namespace Feuille_de_match
             // 
             this.list_players.FormattingEnabled = true;
             this.list_players.ItemHeight = 16;
-            this.list_players.Location = new System.Drawing.Point(759, 178);
+            this.list_players.Location = new System.Drawing.Point(759, 162);
             this.list_players.Name = "list_players";
             this.list_players.ScrollAlwaysVisible = true;
-            this.list_players.Size = new System.Drawing.Size(139, 372);
+            this.list_players.Size = new System.Drawing.Size(305, 388);
             this.list_players.TabIndex = 1;
             // 
             // positions
             // 
             this.positions.FormattingEnabled = true;
-            this.positions.Location = new System.Drawing.Point(920, 178);
+            this.positions.Location = new System.Drawing.Point(1095, 178);
             this.positions.Name = "positions";
             this.positions.Size = new System.Drawing.Size(121, 24);
             this.positions.TabIndex = 2;
@@ -130,7 +130,7 @@ namespace Feuille_de_match
             // 
             // position_button
             // 
-            this.position_button.Location = new System.Drawing.Point(935, 208);
+            this.position_button.Location = new System.Drawing.Point(1110, 208);
             this.position_button.Name = "position_button";
             this.position_button.Size = new System.Drawing.Size(95, 23);
             this.position_button.TabIndex = 4;
@@ -153,7 +153,7 @@ namespace Feuille_de_match
             this.nom1.AutoSize = true;
             this.nom1.Location = new System.Drawing.Point(79, 194);
             this.nom1.Name = "nom1";
-            this.nom1.Size = new System.Drawing.Size(35, 17);
+            this.nom1.Size = new System.Drawing.Size(33, 16);
             this.nom1.TabIndex = 8;
             this.nom1.Text = "nom";
             this.nom1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -163,7 +163,7 @@ namespace Feuille_de_match
             this.nom2.AutoSize = true;
             this.nom2.Location = new System.Drawing.Point(214, 194);
             this.nom2.Name = "nom2";
-            this.nom2.Size = new System.Drawing.Size(35, 17);
+            this.nom2.Size = new System.Drawing.Size(33, 16);
             this.nom2.TabIndex = 9;
             this.nom2.Text = "nom";
             this.nom2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -173,7 +173,7 @@ namespace Feuille_de_match
             this.nom3.AutoSize = true;
             this.nom3.Location = new System.Drawing.Point(337, 194);
             this.nom3.Name = "nom3";
-            this.nom3.Size = new System.Drawing.Size(35, 17);
+            this.nom3.Size = new System.Drawing.Size(33, 16);
             this.nom3.TabIndex = 10;
             this.nom3.Text = "nom";
             this.nom3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -323,7 +323,7 @@ namespace Feuille_de_match
             this.nom4.AutoSize = true;
             this.nom4.Location = new System.Drawing.Point(145, 267);
             this.nom4.Name = "nom4";
-            this.nom4.Size = new System.Drawing.Size(35, 17);
+            this.nom4.Size = new System.Drawing.Size(33, 16);
             this.nom4.TabIndex = 25;
             this.nom4.Text = "nom";
             this.nom4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -333,7 +333,7 @@ namespace Feuille_de_match
             this.nom5.AutoSize = true;
             this.nom5.Location = new System.Drawing.Point(277, 266);
             this.nom5.Name = "nom5";
-            this.nom5.Size = new System.Drawing.Size(35, 17);
+            this.nom5.Size = new System.Drawing.Size(33, 16);
             this.nom5.TabIndex = 26;
             this.nom5.Text = "nom";
             this.nom5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -343,7 +343,7 @@ namespace Feuille_de_match
             this.nom6.AutoSize = true;
             this.nom6.Location = new System.Drawing.Point(79, 329);
             this.nom6.Name = "nom6";
-            this.nom6.Size = new System.Drawing.Size(35, 17);
+            this.nom6.Size = new System.Drawing.Size(33, 16);
             this.nom6.TabIndex = 27;
             this.nom6.Text = "nom";
             this.nom6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -353,7 +353,7 @@ namespace Feuille_de_match
             this.nom8.AutoSize = true;
             this.nom8.Location = new System.Drawing.Point(206, 338);
             this.nom8.Name = "nom8";
-            this.nom8.Size = new System.Drawing.Size(35, 17);
+            this.nom8.Size = new System.Drawing.Size(33, 16);
             this.nom8.TabIndex = 28;
             this.nom8.Text = "nom";
             this.nom8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -363,7 +363,7 @@ namespace Feuille_de_match
             this.nom7.AutoSize = true;
             this.nom7.Location = new System.Drawing.Point(349, 329);
             this.nom7.Name = "nom7";
-            this.nom7.Size = new System.Drawing.Size(35, 17);
+            this.nom7.Size = new System.Drawing.Size(33, 16);
             this.nom7.TabIndex = 29;
             this.nom7.Text = "nom";
             this.nom7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -373,7 +373,7 @@ namespace Feuille_de_match
             this.nom9.AutoSize = true;
             this.nom9.Location = new System.Drawing.Point(65, 407);
             this.nom9.Name = "nom9";
-            this.nom9.Size = new System.Drawing.Size(35, 17);
+            this.nom9.Size = new System.Drawing.Size(33, 16);
             this.nom9.TabIndex = 30;
             this.nom9.Text = "nom";
             this.nom9.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -383,7 +383,7 @@ namespace Feuille_de_match
             this.nom10.AutoSize = true;
             this.nom10.Location = new System.Drawing.Point(164, 448);
             this.nom10.Name = "nom10";
-            this.nom10.Size = new System.Drawing.Size(35, 17);
+            this.nom10.Size = new System.Drawing.Size(33, 16);
             this.nom10.TabIndex = 31;
             this.nom10.Text = "nom";
             this.nom10.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -393,7 +393,7 @@ namespace Feuille_de_match
             this.nom12.AutoSize = true;
             this.nom12.Location = new System.Drawing.Point(256, 499);
             this.nom12.Name = "nom12";
-            this.nom12.Size = new System.Drawing.Size(35, 17);
+            this.nom12.Size = new System.Drawing.Size(33, 16);
             this.nom12.TabIndex = 32;
             this.nom12.Text = "nom";
             this.nom12.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -403,7 +403,7 @@ namespace Feuille_de_match
             this.nom13.AutoSize = true;
             this.nom13.Location = new System.Drawing.Point(349, 545);
             this.nom13.Name = "nom13";
-            this.nom13.Size = new System.Drawing.Size(35, 17);
+            this.nom13.Size = new System.Drawing.Size(33, 16);
             this.nom13.TabIndex = 33;
             this.nom13.Text = "nom";
             this.nom13.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -413,7 +413,7 @@ namespace Feuille_de_match
             this.nom14.AutoSize = true;
             this.nom14.Location = new System.Drawing.Point(446, 600);
             this.nom14.Name = "nom14";
-            this.nom14.Size = new System.Drawing.Size(35, 17);
+            this.nom14.Size = new System.Drawing.Size(33, 16);
             this.nom14.TabIndex = 34;
             this.nom14.Text = "nom";
             this.nom14.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -423,7 +423,7 @@ namespace Feuille_de_match
             this.nom15.AutoSize = true;
             this.nom15.Location = new System.Drawing.Point(220, 646);
             this.nom15.Name = "nom15";
-            this.nom15.Size = new System.Drawing.Size(35, 17);
+            this.nom15.Size = new System.Drawing.Size(33, 16);
             this.nom15.TabIndex = 35;
             this.nom15.Text = "nom";
             this.nom15.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -433,7 +433,7 @@ namespace Feuille_de_match
             this.nom11.AutoSize = true;
             this.nom11.Location = new System.Drawing.Point(34, 600);
             this.nom11.Name = "nom11";
-            this.nom11.Size = new System.Drawing.Size(35, 17);
+            this.nom11.Size = new System.Drawing.Size(33, 16);
             this.nom11.TabIndex = 36;
             this.nom11.Text = "nom";
             this.nom11.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -523,7 +523,7 @@ namespace Feuille_de_match
             this.nom22.AutoSize = true;
             this.nom22.Location = new System.Drawing.Point(572, 447);
             this.nom22.Name = "nom22";
-            this.nom22.Size = new System.Drawing.Size(35, 17);
+            this.nom22.Size = new System.Drawing.Size(33, 16);
             this.nom22.TabIndex = 45;
             this.nom22.Text = "nom";
             // 
@@ -532,7 +532,7 @@ namespace Feuille_de_match
             this.nom23.AutoSize = true;
             this.nom23.Location = new System.Drawing.Point(572, 486);
             this.nom23.Name = "nom23";
-            this.nom23.Size = new System.Drawing.Size(35, 17);
+            this.nom23.Size = new System.Drawing.Size(33, 16);
             this.nom23.TabIndex = 46;
             this.nom23.Text = "nom";
             // 
@@ -541,7 +541,7 @@ namespace Feuille_de_match
             this.nom21.AutoSize = true;
             this.nom21.Location = new System.Drawing.Point(572, 406);
             this.nom21.Name = "nom21";
-            this.nom21.Size = new System.Drawing.Size(35, 17);
+            this.nom21.Size = new System.Drawing.Size(33, 16);
             this.nom21.TabIndex = 47;
             this.nom21.Text = "nom";
             // 
@@ -550,7 +550,7 @@ namespace Feuille_de_match
             this.nom20.AutoSize = true;
             this.nom20.Location = new System.Drawing.Point(572, 358);
             this.nom20.Name = "nom20";
-            this.nom20.Size = new System.Drawing.Size(35, 17);
+            this.nom20.Size = new System.Drawing.Size(33, 16);
             this.nom20.TabIndex = 48;
             this.nom20.Text = "nom";
             // 
@@ -559,7 +559,7 @@ namespace Feuille_de_match
             this.nom19.AutoSize = true;
             this.nom19.Location = new System.Drawing.Point(572, 311);
             this.nom19.Name = "nom19";
-            this.nom19.Size = new System.Drawing.Size(35, 17);
+            this.nom19.Size = new System.Drawing.Size(33, 16);
             this.nom19.TabIndex = 49;
             this.nom19.Text = "nom";
             // 
@@ -568,7 +568,7 @@ namespace Feuille_de_match
             this.nom18.AutoSize = true;
             this.nom18.Location = new System.Drawing.Point(572, 266);
             this.nom18.Name = "nom18";
-            this.nom18.Size = new System.Drawing.Size(35, 17);
+            this.nom18.Size = new System.Drawing.Size(33, 16);
             this.nom18.TabIndex = 50;
             this.nom18.Text = "nom";
             // 
@@ -577,7 +577,7 @@ namespace Feuille_de_match
             this.nom17.AutoSize = true;
             this.nom17.Location = new System.Drawing.Point(572, 218);
             this.nom17.Name = "nom17";
-            this.nom17.Size = new System.Drawing.Size(35, 17);
+            this.nom17.Size = new System.Drawing.Size(33, 16);
             this.nom17.TabIndex = 51;
             this.nom17.Text = "nom";
             // 
@@ -586,7 +586,7 @@ namespace Feuille_de_match
             this.nom16.AutoSize = true;
             this.nom16.Location = new System.Drawing.Point(572, 178);
             this.nom16.Name = "nom16";
-            this.nom16.Size = new System.Drawing.Size(35, 17);
+            this.nom16.Size = new System.Drawing.Size(33, 16);
             this.nom16.TabIndex = 52;
             this.nom16.Text = "nom";
             // 
@@ -605,13 +605,13 @@ namespace Feuille_de_match
             this.nomCoach.AutoSize = true;
             this.nomCoach.Location = new System.Drawing.Point(553, 573);
             this.nomCoach.Name = "nomCoach";
-            this.nomCoach.Size = new System.Drawing.Size(35, 17);
+            this.nomCoach.Size = new System.Drawing.Size(33, 16);
             this.nomCoach.TabIndex = 54;
             this.nomCoach.Text = "nom";
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(817, 19);
+            this.button1.Location = new System.Drawing.Point(908, 16);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(270, 99);
             this.button1.TabIndex = 55;
@@ -633,10 +633,10 @@ namespace Feuille_de_match
             // label25
             // 
             this.label25.AutoSize = true;
-            this.label25.Font = new System.Drawing.Font("Playbill", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(254)));
+            this.label25.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(254)));
             this.label25.Location = new System.Drawing.Point(203, 60);
             this.label25.Name = "label25";
-            this.label25.Size = new System.Drawing.Size(41, 40);
+            this.label25.Size = new System.Drawing.Size(74, 46);
             this.label25.TabIndex = 57;
             this.label25.Text = "VS";
             // 
@@ -656,7 +656,7 @@ namespace Feuille_de_match
             this.label26.AutoSize = true;
             this.label26.Location = new System.Drawing.Point(477, 44);
             this.label26.Name = "label26";
-            this.label26.Size = new System.Drawing.Size(35, 17);
+            this.label26.Size = new System.Drawing.Size(32, 16);
             this.label26.TabIndex = 59;
             this.label26.Text = "Lieu";
             // 
@@ -674,7 +674,7 @@ namespace Feuille_de_match
             this.label27.AutoSize = true;
             this.label27.Location = new System.Drawing.Point(477, 99);
             this.label27.Name = "label27";
-            this.label27.Size = new System.Drawing.Size(38, 17);
+            this.label27.Size = new System.Drawing.Size(36, 16);
             this.label27.TabIndex = 61;
             this.label27.Text = "Date";
             // 
@@ -701,13 +701,13 @@ namespace Feuille_de_match
             this.label28.AutoSize = true;
             this.label28.Location = new System.Drawing.Point(477, 129);
             this.label28.Name = "label28";
-            this.label28.Size = new System.Drawing.Size(47, 17);
+            this.label28.Size = new System.Drawing.Size(44, 16);
             this.label28.TabIndex = 64;
             this.label28.Text = "Heure";
             // 
             // get_team
             // 
-            this.get_team.Location = new System.Drawing.Point(935, 311);
+            this.get_team.Location = new System.Drawing.Point(1110, 311);
             this.get_team.Name = "get_team";
             this.get_team.Size = new System.Drawing.Size(145, 71);
             this.get_team.TabIndex = 65;
@@ -721,7 +721,7 @@ namespace Feuille_de_match
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.ClientSize = new System.Drawing.Size(1111, 707);
+            this.ClientSize = new System.Drawing.Size(1281, 707);
             this.Controls.Add(this.get_team);
             this.Controls.Add(this.label28);
             this.Controls.Add(this.heure);

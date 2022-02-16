@@ -24,7 +24,7 @@ namespace Feuille_de_match
         public void set_police()
         {
             PrivateFontCollection privateFontCollection = new PrivateFontCollection();
-            privateFontCollection.AddFontFile("C:\\Users\\louis\\OneDrive\\Documents\\Rugby\\sports_world\\Sports-World-Regular.ttf");
+            privateFontCollection.AddFontFile(".\\Sports-World-Regular.ttf");
             //this.police = privateFontCollection.Families[0].Name;
             this.police = new FontFamily(privateFontCollection.Families[0].Name, privateFontCollection);
         }
@@ -39,7 +39,7 @@ namespace Feuille_de_match
             Bitmap image_player;
             if (image_player_path == null)
             {
-                image_player = new Bitmap(System.Drawing.Image.FromFile("C:\\Users\\louis\\OneDrive\\Documents\\Rugby\\maillot Lyon 2.jpg"));
+                image_player = new Bitmap(System.Drawing.Image.FromFile(".\\maillot Lyon 2.jpg"));
             } else
             {
                 image_player = new Bitmap(System.Drawing.Image.FromFile(image_player_path));
@@ -56,7 +56,7 @@ namespace Feuille_de_match
                 Bitmap player_img = new Bitmap(image_player, new Size(50,50));
                 player_img.MakeTransparent();
                 graphics.DrawImage(player_img, new Rectangle(point, player_img.Size));
-                graphics.DrawString(position + " " + joueur.get_nom_feuille(), drawFont, drawBrush, point.X + 25, point.Y + 50, stringFormat);
+                graphics.DrawString(position + " " + joueur.get_nom(), drawFont, drawBrush, point.X + 25, point.Y + 50, stringFormat);
             }
         }
 
@@ -71,8 +71,13 @@ namespace Feuille_de_match
                 StringFormat stringFormat = new StringFormat();
                 stringFormat.Alignment = StringAlignment.Center;
                 stringFormat.LineAlignment = StringAlignment.Center;
-
-                graphics.DrawString(position + " " + joueur.get_nom_feuille(), drawFont, drawBrush, point.X, point.Y, stringFormat);
+                if (position == 24)
+                {
+                    graphics.DrawString(joueur.get_nom(), drawFont, drawBrush, point.X, point.Y, stringFormat);
+                } else
+                {
+                    graphics.DrawString(position + " " + joueur.get_nom(), drawFont, drawBrush, point.X, point.Y, stringFormat);
+                }
             }
         }
 
