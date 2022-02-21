@@ -28,7 +28,7 @@ namespace Feuille_de_match
 
             //this.image = new Image(new Bitmap(this.field_image.Image));
             this.postes = new List<Poste>(0);
-            this.tmp_joueur = new List<string>(24);
+            this.tmp_joueur = new List<string>();
             set_position();
         }
 
@@ -55,7 +55,7 @@ namespace Feuille_de_match
                 this.equipe.add_player(j);
                 this.list_players.Items.Add(j.nom_liste());
             }
-            this.joueurs_positionne = new List<Joueur>(22);
+            this.joueurs_positionne = new List<Joueur>();
             for (int i = 0; i < postes_list.Length; i++)
             {
                 this.joueurs_positionne.Add(new Joueur());
@@ -168,6 +168,9 @@ namespace Feuille_de_match
                         case 23:
                             this.nomCoach.Text = this.list_players.SelectedItem.ToString();
                             break;
+                        case 24:
+                            this.nomCoach2.Text = this.list_players.SelectedItem.ToString();
+                            break;
                         default:
                             break;
                     }
@@ -175,8 +178,6 @@ namespace Feuille_de_match
                     this.equipe.get_equipe()[this.list_players.SelectedIndex].set_poste(postes[this.positions.SelectedIndex]);
                     this.joueurs_positionne[this.positions.SelectedIndex] =  this.equipe.get_equipe()[this.list_players.SelectedIndex];
                 
-                //this.image.set_new_player(this.postes[this.positions.SelectedIndex].get_point(), this.equipe.get_equipe()[this.list_players.SelectedIndex].get_joueur_image(), this.equipe.get_equipe()[this.list_players.SelectedIndex], this.positions.SelectedIndex + 1);
-                //this.field_image.Image = this.image.get_image();
             } else
             {
                 var message_erreur_form = new message_erreur();
@@ -264,6 +265,11 @@ namespace Feuille_de_match
                     Stream openFileStream = File.OpenRead(filePath);
                     BinaryFormatter deserializer = new BinaryFormatter();
                     this.joueurs_positionne = (List<Joueur>)deserializer.Deserialize(openFileStream);
+                    for (int i = this.joueurs_positionne.Count; i < this.postes.Count; i++)
+                    {
+                        this.joueurs_positionne.Add(new Joueur());
+                        this.joueurs_positionne[i].set_poste(this.postes[i]);
+                    }
                     //TestLoan.TimeLastLoaded = DateTime.Now;
                     openFileStream.Close();
 
@@ -324,6 +330,10 @@ namespace Feuille_de_match
             if (this.joueurs_positionne.Count >= 24)
             {
                 this.nomCoach.Text = this.joueurs_positionne[23].nom_complet();
+            }
+            if (this.joueurs_positionne.Count >= 25)
+            {
+                this.nomCoach2.Text = this.joueurs_positionne[24].nom_complet();
             }
         }
     }

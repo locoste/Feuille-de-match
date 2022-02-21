@@ -95,6 +95,7 @@ namespace Feuille_de_match
             this.heure = new System.Windows.Forms.TextBox();
             this.label28 = new System.Windows.Forms.Label();
             this.get_team = new System.Windows.Forms.Button();
+            this.nomCoach2 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.image_lyon2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.image_adv)).BeginInit();
             this.SuspendLayout();
@@ -715,6 +716,15 @@ namespace Feuille_de_match
             this.get_team.UseVisualStyleBackColor = true;
             this.get_team.Click += new System.EventHandler(this.get_team_Click);
             // 
+            // nomCoach2
+            // 
+            this.nomCoach2.AutoSize = true;
+            this.nomCoach2.Location = new System.Drawing.Point(553, 600);
+            this.nomCoach2.Name = "nomCoach2";
+            this.nomCoach2.Size = new System.Drawing.Size(33, 16);
+            this.nomCoach2.TabIndex = 66;
+            this.nomCoach2.Text = "nom";
+            // 
             // Feuille
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -722,6 +732,7 @@ namespace Feuille_de_match
             this.AutoSize = true;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.ClientSize = new System.Drawing.Size(1281, 707);
+            this.Controls.Add(this.nomCoach2);
             this.Controls.Add(this.get_team);
             this.Controls.Add(this.label28);
             this.Controls.Add(this.heure);
@@ -860,6 +871,7 @@ namespace Feuille_de_match
         private System.Windows.Forms.TextBox heure;
         private System.Windows.Forms.Label label28;
         private System.Windows.Forms.Button get_team;
+        private System.Windows.Forms.Label nomCoach2;
     }
 }
 
