@@ -217,7 +217,7 @@ namespace Feuille_de_match
         private void joueur_en_double_windows(List<string> joueur_double)
         {
             deja_select doublons = new deja_select();
-            doublons.set_joueur_en_double(joueur_double);
+            doublons.set_joueur_en_double(joueur_double, this.joueurs_positionne);
             
             if (doublons.ShowDialog() == DialogResult.OK)
             {
