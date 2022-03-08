@@ -166,9 +166,15 @@ namespace Feuille_de_match
                             this.nom23.Text = this.list_players.SelectedItem.ToString();
                             break;
                         case 23:
-                            this.nomCoach.Text = this.list_players.SelectedItem.ToString();
+                            this.nom24.Text = this.list_players.SelectedItem.ToString();
                             break;
                         case 24:
+                            this.nom25.Text = this.list_players.SelectedItem.ToString();
+                            break;
+                        case 25:
+                            this.nomCoach.Text = this.list_players.SelectedItem.ToString();
+                            break;
+                        case 26:
                             this.nomCoach2.Text = this.list_players.SelectedItem.ToString();
                             break;
                         default:
@@ -329,11 +335,19 @@ namespace Feuille_de_match
             }
             if (this.joueurs_positionne.Count >= 24)
             {
-                this.nomCoach.Text = this.joueurs_positionne[23].nom_complet();
+                this.nom24.Text = this.joueurs_positionne[23].nom_complet();
             }
             if (this.joueurs_positionne.Count >= 25)
             {
-                this.nomCoach2.Text = this.joueurs_positionne[24].nom_complet();
+                this.nom25.Text = this.joueurs_positionne[24].nom_complet();
+            }
+            if (this.joueurs_positionne.Count >= 26)
+            {
+                this.nomCoach.Text = this.joueurs_positionne[25].nom_complet();
+            }
+            if (this.joueurs_positionne.Count >= 27)
+            {
+                this.nomCoach2.Text = this.joueurs_positionne[26].nom_complet();
             }
         }
     }

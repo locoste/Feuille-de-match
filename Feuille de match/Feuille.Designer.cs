@@ -96,6 +96,10 @@ namespace Feuille_de_match
             this.label28 = new System.Windows.Forms.Label();
             this.get_team = new System.Windows.Forms.Button();
             this.nomCoach2 = new System.Windows.Forms.Label();
+            this.label29 = new System.Windows.Forms.Label();
+            this.label30 = new System.Windows.Forms.Label();
+            this.nom24 = new System.Windows.Forms.Label();
+            this.nom25 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.image_lyon2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.image_adv)).BeginInit();
             this.SuspendLayout();
@@ -595,7 +599,7 @@ namespace Feuille_de_match
             // 
             this.label24.AutoSize = true;
             this.label24.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label24.Location = new System.Drawing.Point(532, 545);
+            this.label24.Location = new System.Drawing.Point(532, 591);
             this.label24.Name = "label24";
             this.label24.Size = new System.Drawing.Size(70, 25);
             this.label24.TabIndex = 53;
@@ -604,7 +608,7 @@ namespace Feuille_de_match
             // nomCoach
             // 
             this.nomCoach.AutoSize = true;
-            this.nomCoach.Location = new System.Drawing.Point(553, 573);
+            this.nomCoach.Location = new System.Drawing.Point(553, 620);
             this.nomCoach.Name = "nomCoach";
             this.nomCoach.Size = new System.Drawing.Size(33, 16);
             this.nomCoach.TabIndex = 54;
@@ -719,11 +723,49 @@ namespace Feuille_de_match
             // nomCoach2
             // 
             this.nomCoach2.AutoSize = true;
-            this.nomCoach2.Location = new System.Drawing.Point(553, 600);
+            this.nomCoach2.Location = new System.Drawing.Point(553, 646);
             this.nomCoach2.Name = "nomCoach2";
             this.nomCoach2.Size = new System.Drawing.Size(33, 16);
             this.nomCoach2.TabIndex = 66;
             this.nomCoach2.Text = "nom";
+            // 
+            // label29
+            // 
+            this.label29.AutoSize = true;
+            this.label29.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label29.Location = new System.Drawing.Point(532, 520);
+            this.label29.Name = "label29";
+            this.label29.Size = new System.Drawing.Size(34, 25);
+            this.label29.TabIndex = 67;
+            this.label29.Text = "24";
+            // 
+            // label30
+            // 
+            this.label30.AutoSize = true;
+            this.label30.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label30.Location = new System.Drawing.Point(532, 556);
+            this.label30.Name = "label30";
+            this.label30.Size = new System.Drawing.Size(34, 25);
+            this.label30.TabIndex = 68;
+            this.label30.Text = "25";
+            // 
+            // nom24
+            // 
+            this.nom24.AutoSize = true;
+            this.nom24.Location = new System.Drawing.Point(572, 527);
+            this.nom24.Name = "nom24";
+            this.nom24.Size = new System.Drawing.Size(33, 16);
+            this.nom24.TabIndex = 69;
+            this.nom24.Text = "nom";
+            // 
+            // nom25
+            // 
+            this.nom25.AutoSize = true;
+            this.nom25.Location = new System.Drawing.Point(572, 563);
+            this.nom25.Name = "nom25";
+            this.nom25.Size = new System.Drawing.Size(33, 16);
+            this.nom25.TabIndex = 70;
+            this.nom25.Text = "nom";
             // 
             // Feuille
             // 
@@ -732,6 +774,10 @@ namespace Feuille_de_match
             this.AutoSize = true;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.ClientSize = new System.Drawing.Size(1281, 707);
+            this.Controls.Add(this.nom25);
+            this.Controls.Add(this.nom24);
+            this.Controls.Add(this.label30);
+            this.Controls.Add(this.label29);
             this.Controls.Add(this.nomCoach2);
             this.Controls.Add(this.get_team);
             this.Controls.Add(this.label28);
@@ -872,6 +918,10 @@ namespace Feuille_de_match
         private System.Windows.Forms.Label label28;
         private System.Windows.Forms.Button get_team;
         private System.Windows.Forms.Label nomCoach2;
+        private System.Windows.Forms.Label label29;
+        private System.Windows.Forms.Label label30;
+        private System.Windows.Forms.Label nom24;
+        private System.Windows.Forms.Label nom25;
     }
 }
 

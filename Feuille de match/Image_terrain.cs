@@ -71,7 +71,7 @@ namespace Feuille_de_match
                 StringFormat stringFormat = new StringFormat();
                 stringFormat.Alignment = StringAlignment.Center;
                 stringFormat.LineAlignment = StringAlignment.Center;
-                if (position >= 24)
+                if (position >= 26)
                 {
                     graphics.DrawString(joueur.get_nom(), drawFont, drawBrush, point.X, point.Y, stringFormat);
                 } else
