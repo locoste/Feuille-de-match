@@ -48,10 +48,10 @@ namespace Feuille_de_match
             foreach(string joueur in joueurs)
             {
                 Joueur j = new Joueur(joueur.Split(',')[0], joueur.Split(',')[1]);
-                if(joueur.Split(',').Length == 3)
-                {
-                    j.set_joueur_image(joueur.Split(' ')[2]);
-                }
+                //if(joueur.Split(',').Length == 3)
+               // {
+               //     j.set_joueur_image(joueur.Split(' ')[2]);
+               // }
                 this.equipe.add_player(j);
                 this.list_players.Items.Add(j.nom_liste());
             }
@@ -84,7 +84,7 @@ namespace Feuille_de_match
          
                 this.list_players.Items.Add(joueur.nom_liste());
 
-                File.AppendAllText(@".\\Joueur.txt", Environment.NewLine + joueur.nom_complet());
+                File.AppendAllText(@".\\Joueur.txt", Environment.NewLine + joueur.nom_fichier());
 
             }
         }

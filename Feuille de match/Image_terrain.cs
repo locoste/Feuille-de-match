@@ -96,8 +96,8 @@ namespace Feuille_de_match
                 graphics.DrawString(lieu[1], drawFont, drawBrush, 30, 120, stringFormat);
                 graphics.DrawString(lieu[2], drawFont, drawBrush, 30, 140, stringFormat);
 
-                graphics.DrawString(date, drawFont, drawBrush, 200, 100, stringFormat);
-                graphics.DrawString(heure, drawFont, drawBrush, 250, 120, stringFormat);
+                graphics.DrawString(date + " " + heure, drawFont, drawBrush, 30, 160, stringFormat);
+                //graphics.DrawString(heure, drawFont, drawBrush, 250, 120, stringFormat);
             }
         }
 

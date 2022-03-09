@@ -47,6 +47,11 @@ namespace Feuille_de_match
             return this.prenom + " " + this.nom;
         }
 
+        public string nom_fichier()
+        {
+            return this.prenom + "," + this.nom;
+        }
+
         public string get_nom_feuille()
         {
             return this.prenom[0] + "." + this.nom;
