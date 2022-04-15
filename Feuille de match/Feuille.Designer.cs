@@ -100,6 +100,7 @@ namespace Feuille_de_match
             this.label30 = new System.Windows.Forms.Label();
             this.nom24 = new System.Windows.Forms.Label();
             this.nom25 = new System.Windows.Forms.Label();
+            this.update_player = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.image_lyon2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.image_adv)).BeginInit();
             this.SuspendLayout();
@@ -767,6 +768,16 @@ namespace Feuille_de_match
             this.nom25.TabIndex = 70;
             this.nom25.Text = "nom";
             // 
+            // update_player
+            // 
+            this.update_player.Location = new System.Drawing.Point(950, 556);
+            this.update_player.Name = "update_player";
+            this.update_player.Size = new System.Drawing.Size(75, 47);
+            this.update_player.TabIndex = 71;
+            this.update_player.Text = "Modifier Joueur";
+            this.update_player.UseVisualStyleBackColor = true;
+            this.update_player.Click += new System.EventHandler(this.update_player_display);
+            // 
             // Feuille
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -774,6 +785,7 @@ namespace Feuille_de_match
             this.AutoSize = true;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.ClientSize = new System.Drawing.Size(1281, 707);
+            this.Controls.Add(this.update_player);
             this.Controls.Add(this.nom25);
             this.Controls.Add(this.nom24);
             this.Controls.Add(this.label30);
@@ -922,6 +934,7 @@ namespace Feuille_de_match
         private System.Windows.Forms.Label label30;
         private System.Windows.Forms.Label nom24;
         private System.Windows.Forms.Label nom25;
+        private System.Windows.Forms.Button update_player;
     }
 }
 

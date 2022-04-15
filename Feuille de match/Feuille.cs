@@ -350,5 +350,10 @@ namespace Feuille_de_match
                 this.nomCoach2.Text = this.joueurs_positionne[26].nom_complet();
             }
         }
+
+        private void update_player_display(object sender, EventArgs e)
+        {
+
+        }
     }
 }
